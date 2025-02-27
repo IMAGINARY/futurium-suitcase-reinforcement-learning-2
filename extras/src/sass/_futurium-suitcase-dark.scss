@@ -1,0 +1,12 @@
+@import "futurium-suitcase-colors";
+
+.tl-dark {
+  background-color: $tl-black;
+  color: white;
+}
+
+.tl-dark-gradient {
+  background: linear-gradient(180deg, $tl-black 0%, $tl-gray-dark 100%);
+  color: white;
+}
+

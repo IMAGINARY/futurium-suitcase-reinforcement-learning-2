@@ -1,0 +1,83 @@
+@import "futurium-suitcase-colors";
+
+@mixin ui-text {
+  @include roboto-medium;
+  font-size: 1.5rem;
+}
+
+.rl2-exhibit {
+  #rewards-ui .ai-training-view-button-step {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ai-training-view-button {
+    border-width: 4px;
+    bottom: 3px;
+
+    &.active {
+      background-color: $tl-green-bright;
+    }
+  }
+
+  .ai-training-view-button-clear {
+    @include ui-text;
+    width: 9em;
+  }
+
+  .ai-training-view-slider {
+    .slider-limit {
+      @include ui-text;
+      bottom: -1em;
+      padding-bottom: 2em;
+
+    }
+
+    .slider-limit.slider-limit-min {
+      background-position: center 1.9em;
+    }
+
+    .slider-limit.slider-limit-max {
+      background-position: center 1.5em;
+    }
+  }
+}
+
+.maze-editor-palette .maze-editor-palette-bar .item .label {
+  width: 6em;
+  @include ui-text;
+}
+
+.hold-button {
+  .progress {
+    background-color: $tl-green-bright;
+  }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: $tl-green-bright;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: $tl-green-bright;
+}
+
+.definition {
+  position: absolute;
+  padding-left: 1.4em;
+
+  @include ui-text;
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    margin-left: -1.5em;
+    margin-bottom: -0.75em;
+    background-image: url('../../static/icons/l-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+  }
+}

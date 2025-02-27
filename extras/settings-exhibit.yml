@@ -1,0 +1,83 @@
+defaultLanguage: de
+languages:
+  en: "English"
+  de: "Deutsch"
+# Time, in seconds, after which the station will be considered "idle". If a screensaver video is
+# set below, it will start. Otherwise, the exhibit will reload, resetting its state.
+idleTimeout: 300
+# Path to a video file to be used as screensaver. The video will be played in a loop, and has
+# to be compatible to run from a <video> HTML element.
+# screensaverVideo: 'static/screensaver/test.mp4'
+robot:
+  texture: 'static/icons/robot.svg'
+tileTypes:
+  1:
+    name: Floor
+    color: '#ffffff'
+    walkable: true
+    reward: -1
+    type: floor
+  2:
+    name: Wall
+    color: '#666666'
+    walkable: false
+    texture: 'static/icons/wall.svg'
+    editorIcon: 'static/icons/wall.svg'
+    type: wall
+  3:
+    name: Exit
+    color: '#75fb5c'
+    walkable: true
+    exit: true
+    reward: 50
+    texture: 'static/icons/exit.svg'
+    editorIcon: 'static/icons/exit.svg'
+    type: exit
+    react: always
+    reaction: 'static/openmoji/trophy.svg'
+    fixed: true
+    inPalette: false
+  4:
+    name: Lava
+    color: '#ff3333'
+    walkable: true
+    reward: -5
+    type: lava
+    react: always
+    reaction: 'static/openmoji/fire.svg'
+  6:
+    name: Pit
+    color: '#000000'
+    walkable: true
+    exit: true
+    reward: -50
+    type: pit
+    react: always
+  5:
+    name: Candy
+    color: '#ffffff'
+    walkable: true
+    reward: -0.2
+    texture: 'static/icons/candy-alt.png'
+    textureVisited: 'static/icons/candy-alt-tr.png'
+    editorIcon: 'static/icons/candy.svg'
+    type: candy
+    react: once
+    reaction: 'static/openmoji/red-heart.svg'
+pixiOptions:
+  antialias: true
+panels:
+  editor:
+    policyOverlayAlwaysVisible: false
+    policyOverlayShowArrows: true
+    policyOverlayShowText: true
+    policyOverlayShowBackground: true
+    aiResetButtonResetsMaze: false
+  training:
+    useToggleFFButton: false
+    useToggleViewPolicyButton: true
+ui:
+  maze:
+    startCellStrokeSize: 10
+    startCellStrokeColor: '#75fb5c'
+    startCellFillColor: '#ffffff'
