@@ -47,6 +47,14 @@ runExhibit((config, textures) => {
   $('#explore-exploit-ui').append(exploreExploitInteractive.ui.$element);
 
   const reactionController = new ReactionController($('body'), config);
+  rewardsInteractive.view.robotView.events.on('reactEnd', (animation) => {
+    const bounds = rewardsInteractive.view.robotView.sprite.getBounds();
+    reactionController.launchReaction(
+      animation.reaction,
+      bounds.x,
+      bounds.y - bounds.height / 2
+    );
+  });
   exploreExploitInteractive.view.robotView.events.on('reactEnd', (animation) => {
     const bounds = exploreExploitInteractive.view.robotView.sprite.getBounds();
     reactionController.launchReaction(
