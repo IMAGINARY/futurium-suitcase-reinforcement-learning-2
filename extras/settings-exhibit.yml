@@ -50,12 +50,14 @@ tileTypes:
     reaction: 'static/openmoji/fire.svg'
   6:
     name: Pit
-    color: '#000000'
+    color: '#ffffff'
     walkable: true
     exit: true
     reward: -50
     type: pit
     react: always
+    texture: 'static/icons/pit.svg'
+    editorIcon: 'static/icons/pit.svg'
   5:
     name: Candy
     color: '#ffffff'
