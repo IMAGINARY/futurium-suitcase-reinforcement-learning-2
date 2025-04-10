@@ -12,8 +12,8 @@ const height = 820;
 const tileWidth = 72;
 const backgroundColor = 0x000000;
 
-const paddingX = 285;
-const paddingY = 40;
+const paddingX = 500;
+const paddingY = 60;
 const uiSpacing = 0;
 
 runExhibit((config, textures) => {
@@ -28,7 +28,7 @@ runExhibit((config, textures) => {
   const mapEditorPanel = $('#map-editor-component').parent("[class*='tl-panel-']");
   const mapEditorInteractive = new MapEditorInteractive(config, textures);
   app.addComponent(mapEditorInteractive,
-    mapEditorPanel.offset().left + paddingX + 0.25 + 180,
+    mapEditorPanel.offset().left + paddingX + 0.25,
     mapEditorPanel.offset().top + paddingY + uiSpacing + 0.25,
     tileWidth * 8,
     tileWidth * 8

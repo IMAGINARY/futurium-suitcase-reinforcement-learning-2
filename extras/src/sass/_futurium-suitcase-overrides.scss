@@ -27,7 +27,7 @@ $exhibit-short-side: 820px;
 .rl2-exhibit {
   #rewards-bar {
     top: 80px;
-    left: 80px;
+    left: 500px;
 
     .label {
       @include ui-text;
@@ -35,42 +35,43 @@ $exhibit-short-side: 820px;
   }
 
   #rewards-ui {
-    left: 80px;
-    top: 250px;
+    left: 500px;
+    top: 225px;
   }
 
   #explore-exploit-ui {
     position: absolute;
-    top: 250px;
-    left: 40px;
+    top: 208px;
+    left: 443px;
   }
 
   #palette .exhibit-maze-editor-palette {
-    top: 40px;
-    left: 40px;
+    top: 50px;
+    left: 60px;
     bottom: auto;
   }
 
   #training-ui {
     bottom: auto;
-    left: 265px;
-    top: 680px;
+    left: auto;
+    right: 60px;
+    top: 670px;
   }
 }
 
 #def-candy {
-  left: 256px;
-  top: 236px;
+  left: 676px;
+  top: 226px;
 }
 
 #def-lava {
-  left: 470px;
-  top: 236px;
+  left: 890px;
+  top: 226px;
 }
 
 #def-exit {
-  left: 620px;
-  top: 236px;
+  left: 1040px;
+  top: 226px;
 }
 
 #lang-switcher-container {

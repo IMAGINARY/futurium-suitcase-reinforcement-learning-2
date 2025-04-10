@@ -7,8 +7,8 @@ const runExhibit = require('./run-exhibit');
 require('../sass/futurium-suitcase.scss');
 const ReactionController = require('./view-html/reaction-controller');
 
-const width = 820;
-const height = 1180;
+const width = 1180;
+const height = 820;
 const tileWidth = 72;
 const backgroundColor = 0x000000;
 
@@ -21,7 +21,7 @@ runExhibit((config, textures) => {
   );
   $('#pixi-app-container').append(app.getView());
 
-  const paddingX = 80;
+  const paddingX = 500;
   const paddingY = 40;
   const uiSpacing = 100;
 
