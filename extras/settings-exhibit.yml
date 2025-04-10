@@ -2,6 +2,9 @@ defaultLanguage: de
 languages:
   en: "English"
   de: "Deutsch"
+sideBySideTranslation:
+  - de
+  - en
 # Time, in seconds, after which the station will be considered "idle". If a screensaver video is
 # set below, it will start. Otherwise, the exhibit will reload, resetting its state.
 idleTimeout: 300
@@ -76,6 +79,7 @@ panels:
   training:
     useToggleFFButton: false
     useToggleViewPolicyButton: true
+    aiResetButtonResetsExplorationRate: true
 ui:
   maze:
     startCellStrokeSize: 10

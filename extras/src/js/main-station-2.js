@@ -10,6 +10,7 @@ require('../sass/futurium-suitcase.scss');
 const width = 1180;
 const height = 820;
 const tileWidth = 72;
+const backgroundColor = 0x000000;
 
 const paddingX = 285;
 const paddingY = 40;
@@ -19,7 +20,7 @@ runExhibit((config, textures) => {
   const app = new PixiCompositeApp(
     width,
     height,
-    0xffffff,
+    backgroundColor,
     config.pixiOptions || {}
   );
   $('#pixi-app-container').append(app.getView());

@@ -10,12 +10,13 @@ const ReactionController = require('./view-html/reaction-controller');
 const width = 820;
 const height = 1180;
 const tileWidth = 72;
+const backgroundColor = 0x000000;
 
 runExhibit((config, textures) => {
   const app = new PixiCompositeApp(
     width,
     height,
-    0xffffff,
+    backgroundColor,
     config.pixiOptions || {}
   );
   $('#pixi-app-container').append(app.getView());

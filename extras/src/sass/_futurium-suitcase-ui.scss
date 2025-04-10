@@ -1,8 +1,17 @@
 @import "futurium-suitcase-colors";
 
+.ai-training-view {
+  display: flex;
+  align-items: center;
+
+  .ai-training-view-slider-exploration-rate {
+    top: 0.9rem;
+  }
+}
+
 @mixin ui-text {
-  @include roboto-medium;
-  font-size: 1.5rem;
+  @include roboto-regular;
+  font-size: 1rem;
 }
 
 .rl2-exhibit {
@@ -16,7 +25,7 @@
     bottom: 3px;
 
     &.active {
-      background-color: $tl-green-bright;
+      //background-color: $tl-green-bright;
     }
   }
 
@@ -26,15 +35,23 @@
   }
 
   .ai-training-view-slider {
+    .slider-input {
+      input {
+        width: calc(100% - 6em);
+        margin-left: 3em;
+      }
+    }
+
     .slider-limit {
       @include ui-text;
       bottom: -1em;
-      padding-bottom: 2em;
-
+      padding-bottom: 2rem;
+      padding-top: 3.75rem;
+      pointer-events: none;
     }
 
     .slider-limit.slider-limit-min {
-      background-position: center 1.9em;
+      background-position: 1.7em 1.9em;
     }
 
     .slider-limit.slider-limit-max {
@@ -45,21 +62,8 @@
 
 .maze-editor-palette .maze-editor-palette-bar .item .label {
   width: 6em;
+  margin-top: -0.3rem;
   @include ui-text;
-}
-
-.hold-button {
-  .progress {
-    background-color: $tl-green-bright;
-  }
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  background-color: $tl-green-bright;
-}
-
-input[type="range"]::-moz-range-thumb {
-  background-color: $tl-green-bright;
 }
 
 .definition {
@@ -81,3 +85,14 @@ input[type="range"]::-moz-range-thumb {
     background-position: top left;
   }
 }
+
+.maze-editor-palette .editor-palette-button-action-reset-map {
+  padding: 0.3em 0.1em;
+}
+
+.ai-training-view-button-clear {
+  box-sizing: content-box;
+  padding: 0.1rem 0;
+}
+
+
