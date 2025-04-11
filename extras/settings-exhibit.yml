@@ -12,7 +12,7 @@ idleTimeout: 300
 # to be compatible to run from a <video> HTML element.
 # screensaverVideo: 'static/screensaver/test.mp4'
 robot:
-  texture: 'static/icons/robot.svg'
+  texture: 'static/icons/robot.png'
 tileTypes:
   1:
     name: Floor
@@ -69,8 +69,12 @@ tileTypes:
     type: candy
     react: once
     reaction: 'static/openmoji/red-heart.svg'
+render:
+  resolutionScale: 2
+  tileSize: 120
 pixiOptions:
   antialias: true
+  resolution: 2
 panels:
   editor:
     policyOverlayAlwaysVisible: false
