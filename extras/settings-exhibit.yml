@@ -24,7 +24,7 @@ tileTypes:
     name: Wall
     color: '#666666'
     walkable: false
-    texture: 'static/icons/wall.svg'
+    texture: 'static/icons/wall.png'
     editorIcon: 'static/icons/wall.svg'
     type: wall
   3:
@@ -33,7 +33,7 @@ tileTypes:
     walkable: true
     exit: true
     reward: 50
-    texture: 'static/icons/exit.svg'
+    texture: 'static/icons/exit.png'
     editorIcon: 'static/icons/exit.svg'
     type: exit
     react: always
@@ -56,7 +56,7 @@ tileTypes:
     reward: -50
     type: pit
     react: always
-    texture: 'static/icons/pit.svg'
+    texture: 'static/icons/pit.png'
     editorIcon: 'static/icons/pit.svg'
   5:
     name: Candy
