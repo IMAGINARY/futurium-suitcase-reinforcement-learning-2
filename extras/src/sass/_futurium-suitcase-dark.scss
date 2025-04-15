@@ -21,11 +21,12 @@
         margin: 0;
 
         &.active {
-          outline: 6px solid colors.$fs-orange;
+          border-color: colors.$fs-yellow;
+          outline: none;
           width: 55px;
           height: 55px;
           transform-origin: center center;
-          scale: 1.05;
+          scale: 1.2;
         }
       }
     }
@@ -36,7 +37,7 @@
       background-color: white;
 
       &.active {
-        background-color: colors.$fs-orange;
+        background-color: colors.$fs-yellow;
       }
     }
   }
@@ -61,7 +62,7 @@
   }
 
   input[type="range"]:focus::-webkit-slider-thumb {
-    outline: 3px solid colors.$fs-orange;
+    outline: 3px solid colors.$fs-yellow;
   }
 
   // Firefox
@@ -77,6 +78,6 @@
 
   input[type="range"]:focus::-moz-range-thumb {
     border: 2px solid colors.$fs-black;
-    outline: 3px solid colors.$fs-orange;
+    outline: 3px solid colors.$fs-yellow;
   }
 }

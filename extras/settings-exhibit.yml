@@ -29,7 +29,7 @@ tileTypes:
     type: wall
   3:
     name: Exit
-    color: '#75fb5c'
+    color: '#48df6a'
     walkable: true
     exit: true
     reward: 50
@@ -42,7 +42,7 @@ tileTypes:
     inPalette: true
   4:
     name: Lava
-    color: '#ff3333'
+    color: '#ff362b'
     walkable: true
     reward: -5
     type: lava
@@ -63,9 +63,9 @@ tileTypes:
     color: '#ffffff'
     walkable: true
     reward: -0.2
-    texture: 'static/icons/candy-alt.png'
-    textureVisited: 'static/icons/candy-alt-tr.png'
-    editorIcon: 'static/icons/candy.svg'
+    texture: 'static/icons/candy.png'
+    textureVisited: 'static/icons/candy-tr.png'
+    editorIcon: 'static/icons/candy-icon.svg'
     type: candy
     react: once
     reaction: 'static/openmoji/red-heart.svg'
