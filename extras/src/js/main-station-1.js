@@ -7,12 +7,15 @@ const runExhibit = require('./run-exhibit');
 require('../sass/futurium-suitcase.scss');
 const ReactionController = require('./view-html/reaction-controller');
 
+import AppScaler from './helpers-html/app-scaler';
+
 const width = 1180;
 const height = 820;
 const tileWidth = 72;
 const backgroundColor = 0x000000;
 
 runExhibit((config, textures) => {
+  const scaler = new AppScaler($('.app-scaler')[0], width, height);
   const app = new PixiCompositeApp(
     width,
     height,
