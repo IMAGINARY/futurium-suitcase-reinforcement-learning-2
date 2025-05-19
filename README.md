@@ -18,6 +18,24 @@ npm run build
 
 This will create a `dist` directory with the compiled exhibit. This directory can be served by any web server.
 
+## Development
+
+Run both
+
+```bash
+npm run watch:copy
+```
+
+and
+
+```bash
+npm run watch:compile
+```
+
+The first will copy any files changed in `extras` to `dist` (without requiring a full build), and
+the second will recompile the JavaScript and SASS files (it actually runs watch on the inner
+project, inside of `dist`).
+
 ## Configuration
 
 The config directory has several data definitions.
@@ -27,6 +45,14 @@ You can override any of them in the settings-exhbit.yml file in the root of the 
 ## Running
 
 Open `station-1.html` and `station-2.html` in two separate iPads.
+
+## Sentry
+
+The app supports Sentry.
+
+The `index.html` page can take the DSN from the `sentry-dsn` query string parameter.
+
+It can also get the DSN from the `app.sentry.dsn` configuration key in the  `settings.yml` file.
 
 ## Credits
 
