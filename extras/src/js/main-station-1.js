@@ -13,7 +13,6 @@ const width = 1180;
 const height = 820;
 const tileWidth = 72;
 const backgroundColor = 0x000000;
-
 runExhibit((config, textures) => {
   const scaler = new AppScaler($('.app-scaler')[0], width, height);
   const app = new PixiCompositeApp(
@@ -24,26 +23,26 @@ runExhibit((config, textures) => {
   );
   $('#pixi-app-container').append(app.getView());
 
-  const paddingX = 500;
-  const paddingY = 40;
-  const uiSpacing = 100;
+  const interactivesLeft = 500;
+  const interactive1Top = 140;
+  const interactive2Top = 450;
 
-  const rewardsPanel = $('#rewards-component').parent("[class*='tl-panel-']");
   const rewardsInteractive = new RewardsInteractive(config, textures);
   $('#rewards-bar').append(rewardsInteractive.$barContainer);
   $('#rewards-ui').append(rewardsInteractive.ui.$element);
+
   app.addComponent(rewardsInteractive,
-    rewardsPanel.offset().left + paddingX + 0.25,
-    rewardsPanel.offset().top + uiSpacing + paddingY + 0.25,
+    interactivesLeft + 0.25,
+    interactive1Top + 0.25,
     tileWidth * 8,
     tileWidth
   );
 
-  const exploreExploitPanel = $('#explore-exploit-component').parent("[class*='tl-panel-']");
   const exploreExploitInteractive = new ExploreExploitInteractive(config, textures);
+
   app.addComponent(exploreExploitInteractive,
-    exploreExploitPanel.offset().left + paddingX + 0.25,
-    exploreExploitPanel.offset().top + paddingY + 0.25,
+    interactivesLeft + 0.25,
+    interactive2Top + 0.25,
     tileWidth * 8,
     tileWidth * 2
   );
