@@ -13,6 +13,7 @@ idleTimeout: 300
 # screensaverVideo: 'static/screensaver/test.mp4'
 robot:
   texture: 'static/icons/robot.png'
+  showReactions: true
 tileTypes:
   1:
     name: Floor
@@ -48,6 +49,7 @@ tileTypes:
     type: lava
     react: always
     reaction: 'static/openmoji/fire.svg'
+    paletteWeight: 5
   6:
     name: Pit
     color: '#ffffff'
@@ -58,6 +60,7 @@ tileTypes:
     react: always
     texture: 'static/icons/pit.png'
     editorIcon: 'static/icons/pit.svg'
+    paletteWeight: 6
   5:
     name: Candy
     color: '#ffffff'
@@ -69,6 +72,7 @@ tileTypes:
     type: candy
     react: once
     reaction: 'static/openmoji/red-heart.svg'
+    paletteWeight: 4
 render:
   resolutionScale: 2
   tileSize: 120
