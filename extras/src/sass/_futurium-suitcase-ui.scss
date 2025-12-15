@@ -1,11 +1,14 @@
 @import "futurium-suitcase-colors";
 
+$large-round-button-size: 72px;
+$medium-round-button-size: 52px;
+
 .ai-training-view {
   display: flex;
   align-items: center;
 
   .ai-training-view-slider-exploration-rate {
-    top: 0.9rem;
+    top: 1.2rem;
     margin: 0 1.2rem;
   }
 }
@@ -22,8 +25,9 @@
   }
 
   .ai-training-view-button {
-    border-width: 4px;
-    bottom: 3px;
+    border: none;
+    bottom: 0;
+    margin: 0 8px 0 8px;
 
     &.active {
       //background-color: $tl-green-bright;
@@ -32,6 +36,14 @@
 
   .ai-training-view-button-run {
     margin-right: 0.25rem;
+    width: $large-round-button-size;
+    height: $large-round-button-size;
+  }
+
+  .ai-training-view-button-turbo,
+  .ai-training-view-button-view-policy {
+    width: $medium-round-button-size;
+    height: $medium-round-button-size;
   }
 
   .ai-training-view-button-clear {
